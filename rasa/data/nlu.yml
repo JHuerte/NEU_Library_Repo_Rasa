@@ -1,0 +1,289 @@
+version: "3.1"
+
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - hello there
+    - good morning
+    - good afternoon
+    - good evening
+    - kumusta
+    - kamusta po
+    - magandang umaga
+    - magandang hapon po
+    - hi po
+    - hey there
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+    - thanks a lot
+    - ty
+    - salamat
+    - salamat po
+    - maraming salamat
+    - that helps, thanks
+    - great, thank you
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - that's all
+    - paalam
+    - sige po, salamat bye
+    - ok bye
+    - nothing else
+
+- intent: out_of_scope
+  examples: |
+    - asdf
+    - asdf qwerty
+    - jkl
+    - lorem ipsum
+    - aaaaa
+    - xyz 123
+    - test test
+    - hmm ok so
+    - qwertyuiop
+    - what's the weather today
+    - tell me a joke
+    - who won the basketball game
+    - what is the capital of france
+    - can you do my homework
+    - how much is tuition
+    - where is the canteen
+    - what is 2 plus 2
+    - recommend a movie
+    - sino ang presidente
+    - how do I enroll in a subject
+    - what is my grade
+
+- intent: faq_borrow
+  examples: |
+    - can I bring home a book
+    - can I take a book home
+    - I want to take home this book
+    - can I use the book outside the library
+    - nanghiram ng libro paano
+    - pahiram ng libro
+    - how do I borrow a book
+    - how can I check out a book
+    - can I borrow books
+    - how many books can I borrow
+    - what is the borrowing limit
+    - how long can I keep a book
+    - loan period for students
+    - can faculty borrow more books
+    - paano humiram ng libro
+    - pwede ba humiram ng libro
+    - ilang libro ang pwedeng hiramin
+    - gusto ko humiram ng book
+    - how to borrow
+    - I want to take out a book
+    - checkout process
+
+- intent: faq_return
+  examples: |
+    - paano ibalik ang libro
+    - nanghiram ako ng libro paano ibalik
+    - I borrowed a book and need to return it
+    - where do I drop off borrowed books
+    - ibabalik ko na yung hiniram ko
+    - return my borrowed book
+    - how do I return a book
+    - where do I return books
+    - can I return a book when the library is closed
+    - is there a book drop
+    - where is the drop box
+    - I need to give back a book
+    - how to bring back borrowed books
+    - paano magsauli ng libro
+    - saan isasauli ang libro
+    - isasauli ko na yung book
+    - can someone else return my book for me
+    - return books after hours
+
+- intent: faq_renew
+  examples: |
+    - can I renew my loan
+    - how do I renew a book
+    - I need more time with my book
+    - can I extend the due date
+    - extend my loan
+    - how many times can I renew
+    - renew online
+    - pwede bang i-renew ang libro
+    - paano magpa-extend ng libro
+    - kailangan ko pa ng oras sa libro
+    - when is my book due
+    - change my due date
+
+- intent: faq_fines
+  examples: |
+    - what are the overdue fines
+    - how much is the fine for a late book
+    - my book is overdue
+    - I returned a book late
+    - is there a penalty for late returns
+    - how do I pay my fine
+    - where can I pay library fines
+    - magkano ang multa
+    - may multa ba pag late
+    - late na ako nagsauli
+    - paano magbayad ng multa
+    - will I be suspended for unpaid fines
+    - late fee
+
+- intent: faq_lost
+  examples: |
+    - I spilled coffee on the book I borrowed
+    - the book got ruined
+    - I can't find the book I borrowed
+    - I misplaced a library book
+    - the cover got ripped
+    - natapunan ko ng kape yung libro
+    - hindi ko mahanap yung hiniram kong libro
+    - I lost a book
+    - I lost a library book what do I do
+    - the book I borrowed is damaged
+    - I damaged a book
+    - my dog tore the book
+    - the pages got wet
+    - how much to replace a lost book
+    - nawala ko yung libro
+    - nasira ko ang libro
+    - nabasa yung book
+    - can I replace the book with a new copy
+    - book is torn
+
+- intent: faq_reserve
+  examples: |
+    - the book I need is out, can I get in line
+    - can I queue for a book
+    - notify me when the book is back
+    - can I be next for this book
+    - pila para sa libro
+    - can I reserve a book
+    - the book I want is checked out
+    - how do I place a hold
+    - put a book on hold
+    - the book is not available
+    - someone else borrowed the book I need
+    - join the waitlist for a book
+    - request a book that is on loan
+    - pwede ba magpa-reserve ng libro
+    - wala yung libro na kailangan ko
+    - hiram na ng iba yung libro
+    - reserve a title
+
+- intent: faq_hours
+  examples: |
+    - what are the library hours
+    - what time does the library open
+    - what time does the library close
+    - is the library open on saturday
+    - is the library open today
+    - are you open on sunday
+    - library schedule
+    - holiday schedule
+    - anong oras bukas ang library
+    - bukas ba ang library ngayon
+    - anong oras sarado ang library
+    - open ba kayo sa sabado
+    - when can I visit the library
+
+- intent: faq_card
+  examples: |
+    - do I need a library card
+    - how do I get a library card
+    - can I use my student ID
+    - can alumni use the library
+    - can visitors use the library
+    - I am a researcher from another school
+    - can outsiders access the library
+    - library membership
+    - kailangan ba ng library card
+    - pwede ba ang alumni sa library
+    - pwede ba pumasok ang hindi estudyante
+    - lost my ID can I still borrow
+
+- intent: faq_thesis
+  examples: |
+    - how can I read a thesis
+    - where can I find theses
+    - I want to read old capstone projects
+    - can I download a thesis
+    - full text of a dissertation
+    - how to access research papers in the repository
+    - where are the graduate theses
+    - can I see sample capstones
+    - paano magbasa ng thesis
+    - saan makikita ang mga thesis
+    - pwede ba i-download ang thesis
+    - looking for related studies
+
+- intent: faq_submit
+  examples: |
+    - how do I submit my thesis
+    - how to deposit my capstone
+    - upload my research paper
+    - I want to publish my thesis in the repository
+    - submission requirements
+    - what file format for thesis submission
+    - how long does approval take
+    - my submission was returned
+    - paano ipasa ang thesis
+    - saan ipapasa ang capstone namin
+    - paano mag-upload ng research
+    - status of my submission
+
+- intent: faq_embargo
+  examples: |
+    - what does embargoed mean
+    - why can't I download this thesis
+    - the file is locked
+    - this item is restricted
+    - how do I request access
+    - request access to a restricted thesis
+    - why is the full text not available
+    - when will the embargo end
+    - bakit hindi ma-download
+    - naka-lock yung file
+    - metadata only meaning
+    - institutional access only
+
+- intent: faq_cite
+  examples: |
+    - how do I cite a repository item
+    - how to cite a thesis
+    - APA citation for a thesis
+    - give me the MLA format
+    - chicago style citation
+    - how to reference a capstone project
+    - bibliography entry for a dissertation
+    - paano i-cite ang thesis
+    - citation format
+    - what is the permanent link to cite
+
+- intent: faq_contact
+  examples: |
+    - how do I contact the library
+    - what is the library email
+    - library phone number
+    - I want to talk to a librarian
+    - can I speak to a human
+    - help desk
+    - where is the circulation desk
+    - who can I ask for help
+    - paano makausap ang librarian
+    - contact number ng library
+    - email ng library
+    - I need to talk to someone

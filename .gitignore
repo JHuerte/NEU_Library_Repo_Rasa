@@ -1,0 +1,11 @@
+node_modules/
+client/dist/
+/data/
+/backups/
+.env
+.vercel/
+*.log
+rasa/.venv/
+rasa/models/
+rasa/.rasa/
+__pycache__/

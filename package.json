@@ -1,0 +1,32 @@
+{
+  "name": "neu-library-repository",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "NEU Library Repository: institutional repository for theses, research and university records",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "db": "npm run db --workspace server",
+    "seed": "npm run seed --workspace server --",
+    "server": "npm run dev --workspace server",
+    "client": "npm run dev --workspace client",
+    "dev": "concurrently -n db,api,web -c gray,cyan,magenta \"npm:db\" \"npm:server\" \"npm:client\"",
+    "dev:nodb": "concurrently -n api,web -c cyan,magenta \"npm:server\" \"npm:client\"",
+    "test": "npm test --workspace server",
+    "backup": "npm run backup --workspace server",
+    "rasa": "node scripts/rasa.js",
+    "rasa:install": "node scripts/rasa.js install",
+    "rasa:train": "node scripts/rasa.js train",
+    "build": "npm run build --workspace client",
+    "start": "npm start --workspace server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
